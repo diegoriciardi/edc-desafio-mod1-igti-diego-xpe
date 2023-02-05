@@ -78,6 +78,7 @@ rais = (
     .withColumnRenamed('Ano Chegada Brasil', 'ano_chegada_brasil')
     .withColumnRenamed('Ind Trab Intermitente', 'ind_trab_intermitente')
     .withColumnRenamed('Ind Trab Parcial', 'ind_trab_parcial')
+    .withColumn("ano", f.lit("2020").cast('int'))
 )
 
 rais = rais.withColumn("uf", f.col("municipio").cast('string').substr(1,2).cast('int'))
