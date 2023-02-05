@@ -1,5 +1,5 @@
 resource "aws_glue_crawler" "crawlerdadosrais" {
-  database_name = aws_glue_catalog_database.crawlerdadosrais.name
+  database_name = "dadosrais"
   name          = "rais"
   role          = aws_iam_role.glue_role.arn
 
