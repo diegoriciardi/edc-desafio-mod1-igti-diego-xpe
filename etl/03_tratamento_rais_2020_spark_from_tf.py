@@ -1,8 +1,5 @@
 from pyspark.sql import functions as f
 from pyspark.sql import SparkSession
-# Para que o comando explain() funcione
-from py4j.java_gateway import java_import
-java_import(spark._sc._jvm, "org.apache.spark.sql.api.python.*")
 
 spark = (
     SparkSession
@@ -80,6 +77,9 @@ rais = (
     .withColumnRenamed('Ind Trab Parcial', 'ind_trab_parcial')
     .withColumn("ano", f.lit("2020").cast('int'))
 )
+
+from py4j.java_gateway import java_import
+java_import(spark._sc._jvm, "org.apache.spark.sql.api.python.*")
 
 rais = rais.withColumn("uf", f.col("municipio").cast('string').substr(1,2).cast('int'))
 
