@@ -77,6 +77,7 @@ resource "aws_iam_role_policy_attachment" "lambda_attach" {
 
 
 # foi necessario adicionar a permissao para cloudwatch logs para o usuario"
+# tambem foi necessario adicionar permissao para firehose para o usuario"
 #############
 ## KINESIS ##
 #############
