@@ -37,3 +37,7 @@ variable "tratamento_rais_pyspark_name" {
 variable "lambda_function_desafio_name" {
   default = "DesafioIGTIMod1ExecutaEMR"
 }
+
+variable "bucket_stream_name" {
+  default = "streaming-bucket"
+}
