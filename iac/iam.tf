@@ -75,6 +75,8 @@ resource "aws_iam_role_policy_attachment" "lambda_attach" {
   policy_arn = aws_iam_policy.lambda.arn
 }
 
+
+# foi necessario adicionar a permissao para cloudwatch logs para o usuario"
 #############
 ## KINESIS ##
 #############
