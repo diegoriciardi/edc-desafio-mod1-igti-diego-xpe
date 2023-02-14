@@ -41,3 +41,15 @@ variable "lambda_function_desafio_name" {
 variable "bucket_stream_name" {
   default = "streaming-bucket"
 }
+
+variable "vpc_id" {
+  default = "vpc-abf23ad6"
+}
+
+variable "airflow_subnet_id" {
+  default = "subnet-db17ae84"
+}
+
+variable "key_pair_name" {
+  default = "keypair-airflow"
+}
